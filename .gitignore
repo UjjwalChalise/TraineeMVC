@@ -1,0 +1,22 @@
+# Web API project
+DotNetMVCAPI/
+
+# Build results
+**/bin/
+**/obj/
+
+# Rider
+.idea/
+
+# User-specific files
+*.user
+*.suo
+*.rsuser
+
+# Logs
+*.log
+
+# SQL Server database files
+*.mdf
+*.ldf
+*.ndf
