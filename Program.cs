@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using TraineeMVC.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var connectionstring = builder.Configuration.GetConnectionString("TraineeConnections");
+
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<TraineeDbContext>(options => options.UseSqlServer(connectionstring));
 
 var app = builder.Build();
 
