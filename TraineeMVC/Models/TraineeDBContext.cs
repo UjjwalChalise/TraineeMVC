@@ -7,4 +7,5 @@ public class TraineeDBContext : DbContext{
     }
 
     public DbSet<MVCappDotNet.Models.Task> Tasks { get; set; }
+    public DbSet<MVCappDotNet.Models.Quiz> Quizs { get; set; }
 }
