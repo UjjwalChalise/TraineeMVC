@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-namespace MVCappDotNet.Models
+namespace TraineeMVC.Models
 {
     public class Task    {
         [Key]

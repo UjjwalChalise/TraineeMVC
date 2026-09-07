@@ -1,13 +1,13 @@
-﻿namespace MVCappDotNet.Models;
+﻿namespace TraineeMVC.Models;
 
 public class Module
 {
     public int Id { get; set; }
-    public string Title { get; set; }
-    public int OrderIndex { get; set; }
 
-    public int CourseId { get; set; }
-    public Course Course { get; set; }
+    public string Name { get; set; } = string.Empty;
 
-    public ICollection<Lesson> Lessons { get; set; }
+    public string? Description { get; set; }
+
+    public ICollection<Course> Courses { get; set; }
+        = new List<Course>();
 }

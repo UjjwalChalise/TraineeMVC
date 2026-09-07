@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TraineeMVC.Data;
 
@@ -11,9 +12,11 @@ using TraineeMVC.Data;
 namespace TraineeMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class TraineeDBContextModelSnapshot : ModelSnapshot
+    [Migration("20260907194140_AddedEntities")]
+    partial class AddedEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
