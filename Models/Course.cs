@@ -22,12 +22,12 @@ namespace TraineeMVC.Models
         // Navigation properties
         public User? Instructor { get; set; }
 
-        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+        //public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
 
-        public ICollection<Module> Modules { get; set; } = new List<Module>();
+        //public ICollection<Module> Modules { get; set; } = new List<Module>();
 
-        public ICollection<Quiz> Quizzes { get; set; } = new List<Quiz>();
+        //public ICollection<Quiz> Quizzes { get; set; } = new List<Quiz>();
 
-        public ICollection<Certificate> Certificates { get; set; } = new List<Certificate>();
+        //public ICollection<Certificate> Certificates { get; set; } = new List<Certificate>();
     }
 }

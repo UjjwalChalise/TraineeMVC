@@ -15,20 +15,20 @@ namespace TraineeMVC.Data
 
         public DbSet<Course> Courses { get; set; }
 
-        public DbSet<Enrollment> Enrollments { get; set; }
+        //public DbSet<Enrollment> Enrollments { get; set; }
 
-        public DbSet<Module> Modules { get; set; }
+        //public DbSet<Module> Modules { get; set; }
 
-        public DbSet<Lesson> Lessons { get; set; }
+        //public DbSet<Lesson> Lessons { get; set; }
 
-        public DbSet<Assignment> Assignments { get; set; }
+        //public DbSet<Assignment> Assignments { get; set; }
 
-        public DbSet<Submission> Submissions { get; set; }
+        //public DbSet<Submission> Submissions { get; set; }
 
-        public DbSet<Quiz> Quizzes { get; set; }
+        //public DbSet<Quiz> Quizzes { get; set; }
 
-        public DbSet<Question> Questions { get; set; }
+        //public DbSet<Question> Questions { get; set; }
 
-        public DbSet<Certificate> Certificates { get; set; }
+        //public DbSet<Certificate> Certificates { get; set; }
     }
 }

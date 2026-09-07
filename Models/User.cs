@@ -25,13 +25,13 @@ namespace TraineeMVC.Models
         [Required]
         public string Role { get; set; } = string.Empty;
 
-        // Navigation properties
-        public ICollection<Course> Courses { get; set; } = new List<Course>();
+        //// Navigation properties
+        //public ICollection<Course> Courses { get; set; } = new List<Course>();
 
-        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+        //public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
 
-        public ICollection<Submission> Submissions { get; set; } = new List<Submission>();
+        //public ICollection<Submission> Submissions { get; set; } = new List<Submission>();
 
-        public ICollection<Certificate> Certificates { get; set; } = new List<Certificate>();
+        //public ICollection<Certificate> Certificates { get; set; } = new List<Certificate>();
     }
 }
