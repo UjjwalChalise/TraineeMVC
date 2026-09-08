@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TraineeMVC.Data;
 using TraineeMVC.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +9,7 @@ var connectionstring = builder.Configuration.GetConnectionString("TraineeConnect
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<TraineeDbContext>(options => options.UseSqlServer(connectionstring));
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionstring));
 
 var app = builder.Build();
 
