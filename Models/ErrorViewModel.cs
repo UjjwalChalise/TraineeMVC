@@ -1,9 +1,10 @@
-namespace TraineeMVC.Models
+﻿namespace TraineeMVC.Models
 {
     public class ErrorViewModel
     {
         public string? RequestId { get; set; }
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public bool ShowRequestId =>
+            !string.IsNullOrEmpty(RequestId);
     }
 }

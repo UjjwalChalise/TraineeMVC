@@ -1,11 +1,12 @@
-﻿namespace TraineeMVC.Models
+public class Module
 {
-    public class Module
-    {
-        public int Id { get; set; }
-        public string ModuleName { get; set; }
+    public int Id { get; set; }
 
-        public int CourseId { get; set; }
-        public Course Course { get; set; }
-    }
+    public string ModuleName { get; set; }
+
+    public int CourseId { get; set; }
+
+    public Course Course { get; set; }
+
+    public ICollection<Assignment> Assignments { get; set; }
 }
