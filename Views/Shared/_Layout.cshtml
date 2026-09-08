@@ -3,48 +3,53 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TraineeMVC</title>
-    <script type="importmap"></script>
+    <title>@ViewData["Title"] - LMS</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/TraineeMVC.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TraineeMVC</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="d-flex">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-brand"><i class="fa-solid fa-graduation-cap"></i> <span class="brand-text">LMS Portal</span></div>
+            <div class="list-group list-group-flush">
+                <a asp-controller="Home" asp-action="Index" class="list-group-item"><i class="fa-solid fa-chart-line"></i> <span class="link-text">Dashboard</span></a>
+                <a asp-controller="Student" asp-action="Index" class="list-group-item"><i class="fa-solid fa-user-graduate"></i> <span class="link-text">Students</span></a>
+                <a asp-controller="Teacher" asp-action="Index" class="list-group-item"><i class="fa-solid fa-chalkboard-user"></i> <span class="link-text">Teachers</span></a>
+                <a asp-controller="Course" asp-action="Index" class="list-group-item"><i class="fa-solid fa-book"></i> <span class="link-text">Courses</span></a>
+                <a asp-controller="Module" asp-action="Index" class="list-group-item"><i class="fa-solid fa-layer-group"></i> <span class="link-text">Modules</span></a>
+                <a asp-controller="Tasks" asp-action="Index" class="list-group-item"><i class="fa-solid fa-file-lines"></i> <span class="link-text">Tasks</span></a>
+                <a asp-controller="Attendance" asp-action="Index" class="list-group-item"><i class="fa-solid fa-calendar-check"></i> <span class="link-text">Attendance</span></a>
+                <a asp-controller="Assignment" asp-action="Index" class="list-group-item"><i class="fa-solid fa-clipboard-list"></i> <span class="link-text">Assignments</span></a>
+                <a asp-controller="User" asp-action="Index" class="list-group-item"><i class="fa-solid fa-user"></i> <span class="link-text">User Details</span></a>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        </div>
+
+        <div class="main-content w-100">
+            <nav class="navbar navbar-light bg-white border-bottom px-4 d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    <button id="toggleBtn" class="btn btn-outline-dark btn-sm me-3">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <span class="fw-bold fs-5">Learning Management System</span>
+                </div>
+                <div>
+                    <a class="btn btn-primary btn-sm me-2" asp-controller="Account" asp-action="Login">Login</a>
+                    <a class="btn btn-danger btn-sm" asp-controller="Account" asp-action="Logout">Logout</a>
+                </div>
+            </nav>
+            <div class="container-fluid p-4">
+                @RenderBody()
+            </div>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - TraineeMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+            document.getElementById('toggleBtn').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.toggle('collapsed');
+            });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

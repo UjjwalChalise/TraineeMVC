@@ -1,20 +1,34 @@
-﻿using System.Reflection;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TraineeMVC.Models;
-
-public class Course
+namespace TraineeMVC.Models
 {
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public string Description { get; set; }
-    public string Status { get; set; } // "Draft", "Published"
+    public class Course
+    {
+        [Key]
+        public int CourseId { get; set; }
 
-    public int InstructorId { get; set; }
-    public User Instructor { get; set; }
+        [Required]
+        [MaxLength(150)]
+        public string Title { get; set; } = string.Empty;
 
-    public ICollection<Module> Modules { get; set; }
-    public ICollection<Enrollment> Enrollments { get; set; }
-    public ICollection<Quiz> Quizzes { get; set; }
-    public ICollection<Assignment> Assignments { get; set; }
-    public ICollection<Announcement> Announcements { get; set; }
+        public string? Description { get; set; }
+
+        [ForeignKey("Teacher")]
+        public int TeacherId { get; set; }
+
+        public Teacher? Teacher { get; set; }
+
+        public DateTime CreatedDate { get; set; }
+            = DateTime.Now;
+
+        public ICollection<Module> Modules { get; set; }
+            = new List<Module>();
+
+        public ICollection<Assignment> Assignments { get; set; }
+            = new List<Assignment>();
+
+        public ICollection<Attendance> Attendances { get; set; }
+            = new List<Attendance>();
+    }
 }

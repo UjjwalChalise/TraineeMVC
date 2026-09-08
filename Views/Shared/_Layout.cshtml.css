@@ -1,48 +1,103 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿<!DOCTYPE html >
+<html lang="en" >
+<head >
+<meta charset="utf-8" / >
+<meta name="viewport" content="width=device-width, initial-scale=1.0" / >
+<title > @ViewData["Title"] - LMS</title >
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
+~ /lib/bootstrap/dist/css/bootstrap.min.css
+<link rele.css
+</head >
+<body >
+<!-- Top Navbar -->
+<nav class="navbar navbar-dark bg-dark px-3" >
+<!-- Menu Button -->
+<button class="btn btn-outline-light"
+type="button"
+data-bs-toggle="offcanvas"
+data-bs-target="#sidebar" >
+☰
+</button >
+<!-- LMS -->
+<a class="navbar-brand ms-3"
+asp-controller="Home"
+asp-action="Index" >
+LMS
+</a >
+<!-- Dashboard -->
+<a class="text-white text-decoration-none"
+asp-controller="Home"
+asp-action="Index" >
+Dashboard
+</a >
+<!-- Right Buttons -->
+<div class="ms-auto" >
 
-a {
-  color: #0077cc;
-}
+#
+Login
+</a >
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
+#
+Logout
+</a >
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
+</div >
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
+</nav >
+<!-- Sidebar -->
+<div class="offcanvas offcanvas-start"
+tabindex="-1"
+id="sidebar" >
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
+<div class="offcanvas-header" >
+<h5 > LMS Menu</h5 >
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
+<button type="button"
+class="btn-close"
+data-bs-dismiss="offcanvas" >
+</button >
+</div >
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
-}
+<div class="offcanvas-body" >
+
+<ul class="list-group" >
+
+<li class="list-group-item" >
+<a asp-controller="User" asp-action="Index" > Users</a >
+</li >
+
+<li class="list-group-item" >
+<a asp-controller="Teacher" asp-action="Index" > Teachers</a >
+</li >
+
+<li class="list-group-item" >
+<a asp-controller="Student" asp-action="Index" > Students</a >
+</li >
+
+<li class="list-group-item" >
+<a asp-controller="Course" asp-action="Index" > Courses</a >
+</li >
+
+<li class="list-group-item" >
+<a asp-controller="Module" asp-action="Index" > Modules</a >
+</li >
+
+<li class="list-group-item" >
+<a asp-controller="Assignment" asp-action="Index" > Assignments</a >
+</li >
+
+<li class="list-group-item" >
+<a asp-controller="Attendance" asp-action="Index" > Attendance</a >
+</li >
+
+</ul >
+
+</div >
+
+</div >
+<!-- Page Content -->
+<div class="container mt-4" >
+@RenderBody()
+</div >
+
+~ /lib/bootstrap/

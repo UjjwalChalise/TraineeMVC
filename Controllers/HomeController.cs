@@ -6,9 +6,28 @@ namespace TraineeMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly TraineeDbContext _context;
+
+        public HomeController(TraineeDbContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var vm = new DashboardViewModel
+            {
+                TotalStudents = _context.Students.Count(),
+                TotalTeachers = _context.Teachers.Count(),
+                TotalCourses = _context.Courses.Count(),
+                TotalModules = _context.Modules.Count(),
+                TotalTasks = _context.Tasks.Count(),
+                TotalAttendance = _context.Attendances.Count(),
+                TotalAssignments = _context.Assignments.Count(),
+                TotalUsers = _context.Users.Count()
+            };
+
+            return View(vm);
         }
 
         public IActionResult Privacy()

@@ -1,13 +1,21 @@
-﻿namespace TraineeMVC.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-public class Module
+namespace TraineeMVC.Models
 {
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public int OrderIndex { get; set; }
+    public class Module
+    {
+        [Key]
+        public int ModuleId { get; set; }
 
-    public int CourseId { get; set; }
-    public Course Course { get; set; }
+        [Required]
+        public string ModuleName { get; set; } = string.Empty;
 
-    public ICollection<Lesson> Lessons { get; set; }
+        public string? Content { get; set; }
+
+        [ForeignKey("Course")]
+        public int CourseId { get; set; }
+
+        public Course? Course { get; set; }
+    }
 }

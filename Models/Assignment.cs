@@ -1,14 +1,23 @@
-﻿namespace TraineeMVC.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-public class Assignment
+namespace TraineeMVC.Models
 {
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public DateTime DueDate { get; set; }
-    public int MaxScore { get; set; }
+    public class Assignment
+    {
+        [Key]
+        public int AssignmentId { get; set; }
 
-    public int CourseId { get; set; }
-    public Course Course { get; set; }
+        [Required]
+        public string Title { get; set; } = string.Empty;
 
-    public ICollection<AssignmentSubmission> Submissions { get; set; }
+        public string? Description { get; set; }
+
+        public DateTime DueDate { get; set; }
+
+        [ForeignKey("Course")]
+        public int CourseId { get; set; }
+
+        public Course? Course { get; set; }
+    }
 }
