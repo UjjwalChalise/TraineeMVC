@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.11" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.11" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.11" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.11" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.11" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.11" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.11">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.11" />
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Course\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Course\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Course\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Course\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Course\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Quiz\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Quiz\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Quiz\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Quiz\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Quiz\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Task\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Task\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Task\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Task\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Task\Index.cshtml" />
+    </ItemGroup>
+
+</Project>

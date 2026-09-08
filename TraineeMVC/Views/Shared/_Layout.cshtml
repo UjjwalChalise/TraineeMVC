@@ -1,0 +1,191 @@
+﻿@{
+    var title = ViewData["Title"] ?? "TraineeMVC";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@title - TraineeMVC</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TraineeMVC.styles.css" asp-append-version="true" />
+
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm">
+            <div class="container-fluid">
+
+                <!-- Sidebar toggle -->
+                <button class="btn btn-outline-secondary me-3"
+                        type="button"
+                        id="sidebarToggle"
+                        aria-label="Toggle sidebar">
+                    <span class="fs-5">☰</span>
+                </button>
+
+                <!-- Brand -->
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="Admin"
+                   asp-action="Index">
+                    Dashboard
+                </a>
+
+                <!-- Authentication area -->
+                <div class="ms-auto">
+                    <span class="text-muted">Authentication</span>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Dashboard layout -->
+    <div class="d-flex min-vh-100">
+
+        <!-- Sidebar -->
+        <aside id="sidebar"
+               class="bg-dark text-white p-3"
+               style="width: 260px; min-width: 260px; transition: all 0.3s;">
+
+            <h5 class="mb-4">Admin Menu</h5>
+
+            <nav class="nav flex-column gap-1">
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index">
+                    Dashboard
+                </a>
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="Module"
+                   asp-action="Index">
+                    Modules
+                </a>
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="Course"
+                   asp-action="Index">
+                    Courses
+                </a>
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="Assignment"
+                   asp-action="Index">
+                    Assignments
+                </a>
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="Student"
+                   asp-action="Index">
+                    Students
+                </a>
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="Teacher"
+                   asp-action="Index">
+                    Teachers
+                </a>
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="Enrollment"
+                   asp-action="Index">
+                    Enrollments
+                </a>
+
+                <hr />
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="CourseSession"
+                   asp-action="Index">
+                    Course Sessions
+                </a>
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="Attendance"
+                   asp-action="Index">
+                    Attendance
+                </a>
+
+                <a class="nav-link text-white rounded"
+                   asp-area=""
+                   asp-controller="AssignmentSubmission"
+                   asp-action="Index">
+                    Submissions
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main content -->
+        <div class="flex-grow-1 d-flex flex-column">
+
+            <main role="main" class="container-fluid p-4 flex-grow-1">
+
+                @RenderBody()
+
+            </main>
+
+            <!-- Footer -->
+            <footer class="border-top bg-white text-muted py-3 mt-auto">
+                <div class="container-fluid text-center">
+                    &copy; 2026 - TraineeMVC
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Application JS -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Sidebar toggle -->
+    <script>
+        document.getElementById("sidebarToggle").addEventListener("click", function () {
+
+            const sidebar = document.getElementById("sidebar");
+
+            if (sidebar.style.display === "none") {
+                sidebar.style.display = "block";
+            } else {
+                sidebar.style.display = "none";
+            }
+
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

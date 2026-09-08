@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraineeMVC", "TraineeMVC\TraineeMVC.csproj", "{69931F78-A207-416B-824F-1C45069A74DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetMVCAPI", "DotNetMVCAPI\DotNetMVCAPI.csproj", "{5EF493F2-4C70-44FD-B6F5-CFE398EF4727}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69931F78-A207-416B-824F-1C45069A74DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69931F78-A207-416B-824F-1C45069A74DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69931F78-A207-416B-824F-1C45069A74DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69931F78-A207-416B-824F-1C45069A74DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF493F2-4C70-44FD-B6F5-CFE398EF4727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF493F2-4C70-44FD-B6F5-CFE398EF4727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF493F2-4C70-44FD-B6F5-CFE398EF4727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF493F2-4C70-44FD-B6F5-CFE398EF4727}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
