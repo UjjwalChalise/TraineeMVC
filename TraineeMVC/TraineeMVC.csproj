@@ -39,6 +39,26 @@
       <_ContentIncludedByDefault Remove="Views\Task\Details.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Task\Edit.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Task\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserDetails\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserDetails\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserDetails\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserDetails\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserDetails\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\AssignmentSubmissionController\Controllers\" />
+      <Folder Include="Areas\AssignmentSubmissionController\Data\" />
+      <Folder Include="Areas\AssignmentSubmissionController\Models\" />
+      <Folder Include="Areas\AssignmentSubmissionController\Views\" />
+      <Folder Include="Areas\EnrollmentController\Controllers\" />
+      <Folder Include="Areas\EnrollmentController\Data\" />
+      <Folder Include="Areas\EnrollmentController\Models\" />
+      <Folder Include="Areas\EnrollmentController\Views\" />
+      <Folder Include="Areas\UserController\Controllers\" />
+      <Folder Include="Areas\UserController\Data\" />
+      <Folder Include="Areas\UserController\Models\" />
+      <Folder Include="Areas\UserController\Views\" />
     </ItemGroup>
 
 </Project>

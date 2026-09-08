@@ -1,12 +1,16 @@
 ﻿namespace TraineeMVC.Models;
+
 public class UserDetails
 {
     public int Id { get; set; }
 
-    public string ApplicationUserId { get; set; } = string.Empty;
+    // Authentication information
+    public string Username { get; set; } = string.Empty;
 
-    public ApplicationUser ApplicationUser { get; set; } = null!;
+    // Store a HASH, never the plain-text password
+    public string PasswordHash { get; set; } = string.Empty;
 
+    // Profile information
     public string FirstName { get; set; } = string.Empty;
 
     public string LastName { get; set; } = string.Empty;
@@ -15,7 +19,14 @@ public class UserDetails
 
     public string? Address { get; set; }
 
+    public string? ProfileImagePath { get; set; }
+
+    // A user can be a teacher, student, or both
     public Teacher? Teacher { get; set; }
 
     public Student? Student { get; set; }
 }
+
+// --------------------------------------------------------------------
+//  var usernameValidation = _context.UserDetails.Where(x=>x.Username == loginViewModel.Username)
+//--------------------------------------------------------------------

@@ -1,4 +1,4 @@
-@model TraineeMVC.Models.UserDetails
+@model TraineeMVC.Models.AssignmentSubmission
 
 @{
     ViewData["Title"] = "Delete";
@@ -8,50 +8,50 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>UserDetails</h4>
+    <h4>AssignmentSubmission</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Username)
+            @Html.DisplayNameFor(model => model.Assignment)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Username)
+            @Html.DisplayFor(model => model.Assignment.Id)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PasswordHash)
+            @Html.DisplayNameFor(model => model.Student)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PasswordHash)
+            @Html.DisplayFor(model => model.Student.Id)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FirstName)
+            @Html.DisplayNameFor(model => model.SubmittedAt)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FirstName)
+            @Html.DisplayFor(model => model.SubmittedAt)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.FilePath)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastName)
+            @Html.DisplayFor(model => model.FilePath)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DateOfBirth)
+            @Html.DisplayNameFor(model => model.Content)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DateOfBirth)
+            @Html.DisplayFor(model => model.Content)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
+            @Html.DisplayNameFor(model => model.Grade)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Address)
+            @Html.DisplayFor(model => model.Grade)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ProfileImagePath)
+            @Html.DisplayNameFor(model => model.Feedback)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ProfileImagePath)
+            @Html.DisplayFor(model => model.Feedback)
         </dd>
     </dl>
     

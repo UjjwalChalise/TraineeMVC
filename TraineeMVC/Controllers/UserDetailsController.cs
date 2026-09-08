@@ -22,8 +22,7 @@ namespace TraineeMVC.Controllers
         // GET: UserDetails
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.UserDetails.Include(u => u.ApplicationUser);
-            return View(await applicationDbContext.ToListAsync());
+            return View(await _context.UserDetails.ToListAsync());
         }
 
         // GET: UserDetails/Details/5
@@ -35,7 +34,6 @@ namespace TraineeMVC.Controllers
             }
 
             var userDetails = await _context.UserDetails
-                .Include(u => u.ApplicationUser)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (userDetails == null)
             {
@@ -48,7 +46,6 @@ namespace TraineeMVC.Controllers
         // GET: UserDetails/Create
         public IActionResult Create()
         {
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
@@ -57,7 +54,7 @@ namespace TraineeMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ApplicationUserId,FirstName,LastName,DateOfBirth,Address")] UserDetails userDetails)
+        public async Task<IActionResult> Create([Bind("Id,Username,PasswordHash,FirstName,LastName,DateOfBirth,Address,ProfileImagePath")] UserDetails userDetails)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +62,6 @@ namespace TraineeMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", userDetails.ApplicationUserId);
             return View(userDetails);
         }
 
@@ -82,7 +78,6 @@ namespace TraineeMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", userDetails.ApplicationUserId);
             return View(userDetails);
         }
 
@@ -91,7 +86,7 @@ namespace TraineeMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ApplicationUserId,FirstName,LastName,DateOfBirth,Address")] UserDetails userDetails)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Username,PasswordHash,FirstName,LastName,DateOfBirth,Address,ProfileImagePath")] UserDetails userDetails)
         {
             if (id != userDetails.Id)
             {
@@ -118,7 +113,6 @@ namespace TraineeMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", userDetails.ApplicationUserId);
             return View(userDetails);
         }
 
@@ -131,7 +125,6 @@ namespace TraineeMVC.Controllers
             }
 
             var userDetails = await _context.UserDetails
-                .Include(u => u.ApplicationUser)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (userDetails == null)
             {

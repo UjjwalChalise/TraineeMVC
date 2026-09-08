@@ -1,7 +1,6 @@
-using TraineeMVC.Data;
-using TraineeMVC.Models;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TraineeMVC.Data;
+using TraineeMVC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,12 +12,7 @@ var connectionString =
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services
-    .AddDefaultIdentity<ApplicationUser>(options =>
-    {
-        options.SignIn.RequireConfirmedAccount = false;
-    })
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddScoped<PasswordService>();
 
 builder.Services.AddControllersWithViews();
 
@@ -31,12 +25,9 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
 
 app.UseRouting();
-
-app.UseAuthentication();
 
 app.UseAuthorization();
 
@@ -44,10 +35,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.MapRazorPages();
-
 app.Run();
-
 // Microsoft.AspNetCore.Identity.UI
 // microsoft.aspnetcore.identity.entityframeworkcore
 // using TraineeMVC.Models;
