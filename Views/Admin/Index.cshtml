@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="mb-4">
+    <h1 class="fw-bold">Admin Dashboard</h1>
+    <p class="text-muted">
+        Manage your Learning Management System from here.
+    </p>
+</div>
+
+<div class="row g-4">
+
+    <!-- Courses -->
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h6 class="text-muted">Courses</h6>
+                <h2 class="fw-bold">—</h2>
+                <a asp-controller="Course"
+                   asp-action="Index"
+                   class="btn btn-outline-primary btn-sm">
+                    Manage Courses
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Students -->
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h6 class="text-muted">Students</h6>
+                <h2 class="fw-bold">—</h2>
+                <a asp-controller="Student"
+                   asp-action="Index"
+                   class="btn btn-outline-primary btn-sm">
+                    Manage Students
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teachers -->
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h6 class="text-muted">Teachers</h6>
+                <h2 class="fw-bold">—</h2>
+                <a asp-controller="Teacher"
+                   asp-action="Index"
+                   class="btn btn-outline-primary btn-sm">
+                    Manage Teachers
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assignments -->
+    <div class="col-12 col-md-6 col-xl-3">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h6 class="text-muted">Assignments</h6>
+                <h2 class="fw-bold">—</h2>
+                <a asp-controller="Assignment"
+                   asp-action="Index"
+                   class="btn btn-outline-primary btn-sm">
+                    Manage Assignments
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row g-4 mt-2">
+
+    <!-- Quick Actions -->
+    <div class="col-12 col-lg-8">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="fw-bold mb-3">Quick Actions</h5>
+
+                <div class="d-flex flex-wrap gap-2">
+
+                    <a asp-controller="Course"
+                       asp-action="Create"
+                       class="btn btn-primary">
+                        Add Course
+                    </a>
+
+                    <a asp-controller="Module"
+                       asp-action="Create"
+                       class="btn btn-outline-primary">
+                        Add Module
+                    </a>
+
+                    <a asp-controller="Assignment"
+                       asp-action="Create"
+                       class="btn btn-outline-primary">
+                        Add Assignment
+                    </a>
+
+                    <a asp-controller="Enrollment"
+                       asp-action="Create"
+                       class="btn btn-outline-primary">
+                        Add Enrollment
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Information -->
+    <div class="col-12 col-lg-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="fw-bold mb-3">System</h5>
+
+                <p class="mb-2">
+                    <strong>Status:</strong>
+                    <span class="badge bg-success">Active</span>
+                </p>
+
+                <p class="text-muted mb-0">
+                    Dashboard statistics will be connected
+                    to the database later.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
