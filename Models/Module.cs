@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TraineeMVC.Models
 {
@@ -8,18 +7,19 @@ namespace TraineeMVC.Models
         [Key]
         public int ModuleId { get; set; }
 
-        [ForeignKey("Course")]
-        public int CourseId { get; set; }
-
         [Required]
-        [MaxLength(150)]
+        [StringLength(150)]
         public string ModuleName { get; set; } = string.Empty;
 
         public string? Description { get; set; }
 
-        // Navigation properties
+        public int CourseId { get; set; }
+
+        // Course this module belongs to
         public Course? Course { get; set; }
 
-        public ICollection<Lesson> Lessons { get; set; } = new List<Lesson>();
+        // Assignments in this module
+        public ICollection<Assignment> Assignments { get; set; }
+            = new List<Assignment>();
     }
 }

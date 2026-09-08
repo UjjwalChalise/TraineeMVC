@@ -11,6 +11,12 @@ namespace TraineeMVC.Controllers
             return View();
         }
 
+            public IActionResult Dashboard()
+        {
+            return View("~/Views/Shared/_Layout.cshtml");
+        }
+
+
         public IActionResult Privacy()
         {
             return View();

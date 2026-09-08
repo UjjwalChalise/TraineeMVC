@@ -4,30 +4,36 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace TraineeMVC.Models
 {
     public class Course
-    {
-        [Key]
-        public int CourseId { get; set; }
 
-        [Required]
-        [MaxLength(150)]
-        public string Title { get; set; } = string.Empty;
+        {
+            [Key]
+            public int CourseId { get; set; }
 
-        public string? Description { get; set; }
+            [Required]
+            [StringLength(150)]
+            public string CourseName { get; set; } = string.Empty;
 
-        [ForeignKey("Instructor")]
-        public int InstructorId { get; set; }
+            public string? Description { get; set; }
 
-        public DateTime CreatedDate { get; set; } = DateTime.Now;
+            public int TeacherId { get; set; }
 
-        // Navigation properties
-        public User? Instructor { get; set; }
+            // Teacher who teaches the course
+            public Teacher? Teacher { get; set; }
 
-        //public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+            // Modules inside the course
+            public ICollection<Module> Modules { get; set; }
+                = new List<Module>();
 
-        //public ICollection<Module> Modules { get; set; } = new List<Module>();
-
-        //public ICollection<Quiz> Quizzes { get; set; } = new List<Quiz>();
-
-        //public ICollection<Certificate> Certificates { get; set; } = new List<Certificate>();
+            // Attendance records for this course
+            public ICollection<Attendance> Attendances { get; set; }
+                = new List<Attendance>();
+        }
     }
-}
+
+    //public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+
+    //public ICollection<Module> Modules { get; set; } = new List<Module>();
+
+    //public ICollection<Quiz> Quizzes { get; set; } = new List<Quiz>();
+
+    //public ICollection<Certificate> Certificates { get; set; } = new List<Certificate>();
