@@ -1,17 +1,17 @@
 ﻿using TraineeMVC.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace TraineeMVC.Data;
 
-public class ApplicationDbContext
-    : IdentityDbContext<ApplicationUser>
+public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(
         DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
     }
+
+    public DbSet<ApplicationUser> Users => Set<ApplicationUser>();
 
     public DbSet<UserDetails> UserDetails => Set<UserDetails>();
 
@@ -39,7 +39,6 @@ public class ApplicationDbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        base.OnModelCreating(builder);
 
         // ---------------------------------------
         // ApplicationUser -> UserDetails
