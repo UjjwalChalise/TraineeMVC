@@ -44,8 +44,19 @@
                 </a>
 
                 <!-- Authentication area -->
+              
                 <div class="ms-auto">
-                    <span class="text-muted">Authentication</span>
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        <span class="text-muted me-2">Hi, @User.Identity.Name</span>
+                        <form asp-controller="Login" asp-action="Logout" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-outline-secondary btn-sm">Logout</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <a asp-controller="Login" asp-action="Index" class="btn btn-outline-primary btn-sm">Login</a>
+                    }
                 </div>
 
             </div>

@@ -3,9 +3,11 @@ public class UserDetails
 {
     public int Id { get; set; }
 
-    public string ApplicationUserId { get; set; } = string.Empty;
+ 
+    public string Username { get; set; } = string.Empty;
 
-    public ApplicationUser ApplicationUser { get; set; } = null!;
+
+    public string PasswordHash { get; set; } = string.Empty;
 
     public string FirstName { get; set; } = string.Empty;
 
