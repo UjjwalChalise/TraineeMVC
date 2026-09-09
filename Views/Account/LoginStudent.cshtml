@@ -1,0 +1,34 @@
+﻿@model TraineeMVC.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Login Student";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <h2 class="brand-mark mb-4">Student log in</h2>
+
+        <form asp-controller="Account" asp-action="LoginStudent" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn-auth-signup">Log in</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

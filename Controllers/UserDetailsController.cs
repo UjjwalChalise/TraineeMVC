@@ -48,7 +48,7 @@ namespace TraineeMVC.Controllers
         // GET: UserDetails/Create
         public IActionResult Create()
         {
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["ApplicationUserId"] = new SelectList(_context.ApplicationUsers, "Id", "Id");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace TraineeMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", userDetails.ApplicationUserId);
+            ViewData["ApplicationUserId"] = new SelectList(_context.ApplicationUsers, "Id", "Id", userDetails.ApplicationUserId);
             return View(userDetails);
         }
 
@@ -82,7 +82,7 @@ namespace TraineeMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", userDetails.ApplicationUserId);
+            ViewData["ApplicationUserId"] = new SelectList(_context.ApplicationUsers, "Id", "Id", userDetails.ApplicationUserId);
             return View(userDetails);
         }
 
@@ -118,7 +118,7 @@ namespace TraineeMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", userDetails.ApplicationUserId);
+            ViewData["ApplicationUserId"] = new SelectList(_context.ApplicationUsers, "Id", "Id", userDetails.ApplicationUserId);
             return View(userDetails);
         }
 

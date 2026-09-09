@@ -4,15 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TraineeMVC.Data;
 
-public class ApplicationDbContext
-    : IdentityDbContext<ApplicationUser>
+public class ApplicationDbContext : DbContext
 {
-    public ApplicationDbContext(
-        DbContextOptions<ApplicationDbContext> options)
-        : base(options)
-    {
-    }
-
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+    
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; } = null!;
     public DbSet<UserDetails> UserDetails => Set<UserDetails>();
 
     public DbSet<Teacher> Teachers => Set<Teacher>();

@@ -277,8 +277,8 @@
             </div>
 
             <div class="auth-area ms-auto">
-                <a class="btn-auth-login" asp-area="" asp-controller="Account" asp-action="Login">Log in</a>
-                <a class="btn-auth-signup" asp-area="" asp-controller="Account" asp-action="Register">Sign up</a>
+                <a class="btn-auth-signup" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                <a class="btn-auth-signup" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
             </div>
 
         </div>
@@ -322,16 +322,8 @@
                     <span class="icon-dot"></span><span class="nav-label">Enrollments</span>
                 </a>
 
-                <div class="nav-group-title">Operations</div>
-
-                <a class="side-link @ActiveClass("CourseSession")" asp-area="" asp-controller="CourseSession" asp-action="Index">
-                    <span class="icon-dot"></span><span class="nav-label">Course Sessions</span>
-                </a>
                 <a class="side-link @ActiveClass("Attendance")" asp-area="" asp-controller="Attendance" asp-action="Index">
                     <span class="icon-dot"></span><span class="nav-label">Attendance</span>
-                </a>
-                <a class="side-link @ActiveClass("AssignmentSubmission")" asp-area="" asp-controller="AssignmentSubmission" asp-action="Index">
-                    <span class="icon-dot"></span><span class="nav-label">Submissions</span>
                 </a>
 
             </nav>
