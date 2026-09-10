@@ -34,8 +34,39 @@
                     <span class="fw-bold fs-5">Learning Management System</span>
                 </div>
                 <div>
-                    <a class="btn btn-primary btn-sm me-2" asp-controller="Account" asp-action="Login">Login</a>
-                    <a class="btn btn-danger btn-sm" asp-controller="Account" asp-action="Logout">Logout</a>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <!-- Logged in user -->
+
+                        <span class="me-3">
+                            Welcome, @User.Identity.Name
+                        </span>
+
+                        <!-- Logout -->
+                        <form asp-controller="Account"
+                              asp-action="Logout"
+                              method="post"
+                              class="d-inline">
+
+                            @Html.AntiForgeryToken()
+
+                            <button type="submit"
+                                    class="btn btn-outline-danger btn-sm">
+                                Logout
+                            </button>
+
+                        </form>
+                    }
+                    else
+                    {
+                        <!-- Not logged in -->
+
+                        <a class="btn btn-primary btn-sm me-2"
+                           asp-controller="Account"
+                           asp-action="Login">
+                            Login
+                        </a>
+                    }
                 </div>
             </nav>
             <div class="container-fluid p-4">

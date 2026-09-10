@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using TraineeMVC.Models;
 
@@ -9,6 +10,19 @@ builder.Services.AddControllersWithViews();
 // Get connection string
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+builder.Services
+    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Account/Login";
+        options.LogoutPath = "/Account/Logout";
+        options.AccessDeniedPath = "/Account/AccessDenied";
+        options.ExpireTimeSpan = TimeSpan.FromDays(30);
+        options.SlidingExpiration = true;
+        options.Cookie.Name = "MyApp.Auth";
+
+    });
+
 // Register DbContext
 
 
@@ -16,8 +30,6 @@ builder.Services.AddDbContext<TraineeDbContext>(options =>
     options.UseSqlServer(connectionString)
 );
 
-// Register Authorization
-builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
@@ -32,6 +44,7 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
