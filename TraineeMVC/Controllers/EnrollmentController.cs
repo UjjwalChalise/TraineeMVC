@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace TraineeMVC.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin, Student")]
     public class EnrollmentController : Controller
     {
         private readonly ApplicationDbContext _context;

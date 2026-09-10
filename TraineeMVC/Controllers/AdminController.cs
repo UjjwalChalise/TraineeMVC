@@ -2,8 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 namespace TraineeMVC.Controllers;
 
-[Authorize]
-
+[Authorize(Roles = "Admin")]
 public class AdminController : Controller
 {
     // GET
