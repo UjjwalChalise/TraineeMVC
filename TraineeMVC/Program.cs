@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using TraineeMVC.Data;
-using TraineeMVC.Services;
+using TraineeMVC.Repositories;
 
+// Cookie-based authentication
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString =
@@ -12,7 +13,18 @@ var connectionString =
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddScoped<PasswordService>();
+//Repository registration
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+// Cookie Authentication
+builder.Services
+    .AddAuthentication("MyCookieAuthentication")
+        .AddCookie("MyCookieAuthentication", options =>
+        {
+            options.LoginPath = "/Login/Index";
+            options.LogoutPath = "/Login/Logout";
+            options.AccessDeniedPath = "/Login/AccessDenied";
+        });
 
 builder.Services.AddControllersWithViews();
 
@@ -29,6 +41,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Authentication before Authorization
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
@@ -36,6 +50,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
 // Microsoft.AspNetCore.Identity.UI
 // microsoft.aspnetcore.identity.entityframeworkcore
 // using TraineeMVC.Models;

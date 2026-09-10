@@ -12,7 +12,7 @@ using TraineeMVC.Data;
 namespace TraineeMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260908100545_ManualAuthentication")]
+    [Migration("20260910092752_ManualAuthentication")]
     partial class ManualAuthentication
     {
         /// <inheritdoc />

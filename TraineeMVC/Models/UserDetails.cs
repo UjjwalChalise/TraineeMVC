@@ -26,7 +26,24 @@ public class UserDetails
 
     public Student? Student { get; set; }
 }
-
+/*
 // --------------------------------------------------------------------
-//  var usernameValidation = _context.UserDetails.Where(x=>x.Username == loginViewModel.Username)
+//  var userValidation = _context.UserDetails.Where(x=>x.Username == loginViewModel.Username)
 //--------------------------------------------------------------------
+
+if (userValidation == null){
+    return View(LoginViewModel)
+}
+string hashedPassword = CalculateHash(loginViewModel.Password)
+
+
+signinasync.signin 
+call context from repository pattern
+
+
+
+
+
+sha256
+
+*/

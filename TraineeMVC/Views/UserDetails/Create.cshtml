@@ -1,60 +1,248 @@
-@model TraineeMVC.Models.UserDetails
+@model TraineeMVC.ViewModels.UserCreateViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Sign Up";
 }
 
-<h1>Create</h1>
+<div class="row justify-content-center py-5">
+    <div class="col-12 col-lg-8 col-xl-7">
 
-<h4>UserDetails</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Username" class="control-label"></label>
-                <input asp-for="Username" class="form-control" />
-                <span asp-validation-for="Username" class="text-danger"></span>
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body p-4 p-md-5">
+
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold">Create Your Account</h2>
+                    <p class="text-muted">
+                        Sign up for the Learning Management System
+                    </p>
+                </div>
+
+                <form asp-controller="UserDetails"
+                      asp-action="Create"
+                      method="post">
+
+                    @Html.AntiForgeryToken()
+
+                    <div asp-validation-summary="ModelOnly"
+                         class="text-danger mb-3">
+                    </div>
+
+                    <!-- Account Type -->
+                    <div class="mb-4">
+                        <label asp-for="AccountType"
+                               class="form-label">
+                            Account Type
+                        </label>
+
+                        <select asp-for="AccountType"
+                                class="form-select">
+                            <option value="">-- Select Account Type --</option>
+                            <option value="Student">Student</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Both">Teacher & Student</option>
+                        </select>
+
+                        <span asp-validation-for="AccountType"
+                              class="text-danger">
+                        </span>
+                    </div>
+
+                    <div class="row">
+
+                        <!-- Username -->
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Username"
+                                   class="form-label">
+                                Username
+                            </label>
+
+                            <input asp-for="Username"
+                                   class="form-control"
+                                   autocomplete="username" />
+
+                            <span asp-validation-for="Username"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Password"
+                                   class="form-label">
+                                Password
+                            </label>
+
+                            <input asp-for="Password"
+                                   class="form-control"
+                                   autocomplete="new-password" />
+
+                            <span asp-validation-for="Password"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <!-- First Name -->
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="FirstName"
+                                   class="form-label">
+                                First Name
+                            </label>
+
+                            <input asp-for="FirstName"
+                                   class="form-control" />
+
+                            <span asp-validation-for="FirstName"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="LastName"
+                                   class="form-label">
+                                Last Name
+                            </label>
+
+                            <input asp-for="LastName"
+                                   class="form-control" />
+
+                            <span asp-validation-for="LastName"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="DateOfBirth"
+                                   class="form-label">
+                                Date of Birth
+                            </label>
+
+                            <input asp-for="DateOfBirth"
+                                   class="form-control"
+                                   type="date" />
+                        </div>
+
+                        <!-- Address -->
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Address"
+                                   class="form-label">
+                                Address
+                            </label>
+
+                            <input asp-for="Address"
+                                   class="form-control" />
+                        </div>
+
+                    </div>
+
+                    <hr class="my-4" />
+
+                    <h5 class="fw-bold mb-3">
+                        Teacher Information
+                    </h5>
+
+                    <div class="row">
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="EmployeeNumber"
+                                   class="form-label">
+                                Employee Number
+                            </label>
+
+                            <input asp-for="EmployeeNumber"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="Department"
+                                   class="form-label">
+                                Department
+                            </label>
+
+                            <input asp-for="Department"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="Qualification"
+                                   class="form-label">
+                                Qualification
+                            </label>
+
+                            <input asp-for="Qualification"
+                                   class="form-control" />
+                        </div>
+
+                    </div>
+
+                    <hr class="my-4" />
+
+                    <h5 class="fw-bold mb-3">
+                        Student Information
+                    </h5>
+
+                    <div class="row">
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="StudentNumber"
+                                   class="form-label">
+                                Student Number
+                            </label>
+
+                            <input asp-for="StudentNumber"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="Program"
+                                   class="form-label">
+                                Program
+                            </label>
+
+                            <input asp-for="Program"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="Semester"
+                                   class="form-label">
+                                Semester
+                            </label>
+
+                            <input asp-for="Semester"
+                                   class="form-control" />
+                        </div>
+
+                    </div>
+
+                    <div class="d-grid mt-4">
+                        <button type="submit"
+                                class="btn btn-primary btn-lg">
+                            Create Account
+                        </button>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <span class="text-muted">
+                            Already have an account?
+                        </span>
+
+                        <a asp-controller="Login"
+                           asp-action="Index">
+                            Login
+                        </a>
+                    </div>
+
+                </form>
+
             </div>
-            <div class="form-group">
-                <label asp-for="PasswordHash" class="control-label"></label>
-                <input asp-for="PasswordHash" class="form-control" />
-                <span asp-validation-for="PasswordHash" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DateOfBirth" class="control-label"></label>
-                <input asp-for="DateOfBirth" class="form-control" />
-                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProfileImagePath" class="control-label"></label>
-                <input asp-for="ProfileImagePath" class="form-control" />
-                <span asp-validation-for="ProfileImagePath" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

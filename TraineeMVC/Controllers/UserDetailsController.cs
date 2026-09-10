@@ -1,157 +1,124 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Security.Cryptography;
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using TraineeMVC.Data;
 using TraineeMVC.Models;
+using TraineeMVC.Repositories;
+using TraineeMVC.ViewModels;
 
-namespace TraineeMVC.Controllers
+namespace TraineeMVC.Controllers;
+
+public class UserDetailsController : Controller
 {
-    public class UserDetailsController : Controller
+    private readonly IUserRepository _userRepository;
+
+    public UserDetailsController(IUserRepository userRepository)
     {
-        private readonly ApplicationDbContext _context;
+        _userRepository = userRepository;
+    }
 
-        public UserDetailsController(ApplicationDbContext context)
+    // GET: /UserDetails/Create
+    [HttpGet]
+    public IActionResult Create()
+    {
+        var model = new UserCreateViewModel();
+
+        return View(model);
+    }
+
+    // POST: /UserDetails/Create
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(UserCreateViewModel model)
+    {
+        if (!ModelState.IsValid)
         {
-            _context = context;
+            return View(model);
         }
 
-        // GET: UserDetails
-        public async Task<IActionResult> Index()
+        // Check whether the username is already taken
+        if (await _userRepository.UsernameExistsAsync(model.Username))
         {
-            return View(await _context.UserDetails.ToListAsync());
+            ModelState.AddModelError(
+                "Username",
+                "This username is already taken.");
+
+            return View(model);
         }
 
-        // GET: UserDetails/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // Convert AccountType into the relationships
+        switch (model.AccountType)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            case "Student":
+                model.IsStudent = true;
+                model.IsTeacher = false;
+                break;
 
-            var userDetails = await _context.UserDetails
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (userDetails == null)
-            {
-                return NotFound();
-            }
+            case "Teacher":
+                model.IsTeacher = true;
+                model.IsStudent = false;
+                break;
 
-            return View(userDetails);
+            case "Both":
+                model.IsTeacher = true;
+                model.IsStudent = true;
+                break;
+
+            default:
+                ModelState.AddModelError(
+                    "AccountType",
+                    "Please select an account type.");
+
+                return View(model);
         }
 
-        // GET: UserDetails/Create
-        public IActionResult Create()
+        // Create the UserDetails entity
+        var user = new UserDetails
         {
-            return View();
+            Username = model.Username,
+            PasswordHash = CalculateHash(model.Password),
+            FirstName = model.FirstName,
+            LastName = model.LastName,
+            DateOfBirth = model.DateOfBirth,
+            Address = model.Address,
+            ProfileImagePath = model.ProfileImagePath
+        };
+
+        // Create Teacher record when selected
+        if (model.IsTeacher)
+        {
+            user.Teacher = new Teacher
+            {
+                EmployeeNumber = model.EmployeeNumber,
+                Department = model.Department,
+                Qualification = model.Qualification
+            };
         }
 
-        // POST: UserDetails/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Username,PasswordHash,FirstName,LastName,DateOfBirth,Address,ProfileImagePath")] UserDetails userDetails)
+        // Create Student record when selected
+        if (model.IsStudent)
         {
-            if (ModelState.IsValid)
+            user.Student = new Student
             {
-                _context.Add(userDetails);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(userDetails);
+                StudentNumber = model.StudentNumber,
+                Program = model.Program,
+                Semester = model.Semester
+            };
         }
 
-        // GET: UserDetails/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        await _userRepository.AddAsync(user);
 
-            var userDetails = await _context.UserDetails.FindAsync(id);
-            if (userDetails == null)
-            {
-                return NotFound();
-            }
-            return View(userDetails);
-        }
+        return RedirectToAction(
+            "Index",
+            "Login");
+    }
 
-        // POST: UserDetails/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Username,PasswordHash,FirstName,LastName,DateOfBirth,Address,ProfileImagePath")] UserDetails userDetails)
-        {
-            if (id != userDetails.Id)
-            {
-                return NotFound();
-            }
+    private string CalculateHash(string password)
+    {
+        using var sha256 = SHA256.Create();
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(userDetails);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UserDetailsExists(userDetails.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(userDetails);
-        }
+        var bytes = sha256.ComputeHash(
+            Encoding.UTF8.GetBytes(password));
 
-        // GET: UserDetails/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var userDetails = await _context.UserDetails
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (userDetails == null)
-            {
-                return NotFound();
-            }
-
-            return View(userDetails);
-        }
-
-        // POST: UserDetails/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var userDetails = await _context.UserDetails.FindAsync(id);
-            if (userDetails != null)
-            {
-                _context.UserDetails.Remove(userDetails);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool UserDetailsExists(int id)
-        {
-            return _context.UserDetails.Any(e => e.Id == id);
-        }
+        return Convert.ToHexString(bytes);
     }
 }
