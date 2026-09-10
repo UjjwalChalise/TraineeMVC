@@ -3,36 +3,124 @@
   "WorkspaceRootPath": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\repositories\\userdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\repositories\\userdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\userdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\userdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\traineemvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\traineemvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\repositories\\authenticationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\repositories\\authenticationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\repositories\\iauthenticationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\repositories\\iauthenticationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\repositories\\iuserdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\repositories\\iuserdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\views\\authentication\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\views\\authentication\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\views\\userdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\views\\userdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\views\\userdetails\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\views\\userdetails\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\models\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\models\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|c:\\users\\aadhikari\\source\\repos\\traineemvc\\traineemvc\\traineemvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{69931F78-A207-416B-824F-1C45069A74DB}|TraineeMVC\\TraineeMVC.csproj|solutionrelative:traineemvc\\traineemvc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,53 +130,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "TraineeMVC\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "TraineeMVC\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T09:53:32.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "TraineeMVC\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "TraineeMVC\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAADgAAAAAAAAAAAAqwEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-08T09:31:35.929Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "TraineeMVC\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "TraineeMVC\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABAAAAAAAAAAA==",
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowDQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-08T09:31:35.965Z",
+              "WhenOpened": "2026-09-10T05:14:15.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserDetailsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Repositories\\UserDetailsRepository.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Repositories\\UserDetailsRepository.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Repositories\\UserDetailsRepository.cs",
+              "RelativeToolTip": "TraineeMVC\\Repositories\\UserDetailsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T06:46:40.115Z",
               "EditorCaption": ""
             },
             {
@@ -99,14 +174,296 @@
               "RelativeDocumentMoniker": "TraineeMVC\\Program.cs",
               "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Program.cs",
               "RelativeToolTip": "TraineeMVC\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvxUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-08T09:31:35.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDetailsController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\UserDetailsController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\UserDetailsController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\UserDetailsController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\UserDetailsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T10:30:03.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAuthenticationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Repositories\\IAuthenticationRepository.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Repositories\\IAuthenticationRepository.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Repositories\\IAuthenticationRepository.cs",
+              "RelativeToolTip": "TraineeMVC\\Repositories\\IAuthenticationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T04:42:05.252Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "AuthenticationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Repositories\\AuthenticationRepository.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Repositories\\AuthenticationRepository.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Repositories\\AuthenticationRepository.cs",
+              "RelativeToolTip": "TraineeMVC\\Repositories\\AuthenticationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T06:45:33.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserDetailsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Repositories\\IUserDetailsRepository.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Repositories\\IUserDetailsRepository.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Repositories\\IUserDetailsRepository.cs",
+              "RelativeToolTip": "TraineeMVC\\Repositories\\IUserDetailsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T06:45:18.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssignmentController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\AssignmentController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\AssignmentController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\AssignmentController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\AssignmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T05:19:24.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T05:19:42.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T05:19:20.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AttendanceController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\AttendanceController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\AttendanceController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\AttendanceController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\AttendanceController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T05:20:00.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EnrollmentController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\EnrollmentController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\EnrollmentController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\EnrollmentController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\EnrollmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T05:20:15.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ModuleController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\ModuleController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\ModuleController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\ModuleController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\ModuleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T00:50:16.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T05:20:09.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TeacherController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\TeacherController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\TeacherController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\TeacherController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\TeacherController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T05:20:30.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "TraineeMVC\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T00:49:21.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TraineeMVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TraineeMVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-10T05:15:17.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Authentication\\Login.cshtml",
+              "RelativeDocumentMoniker": "TraineeMVC\\Views\\Authentication\\Login.cshtml",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Authentication\\Login.cshtml",
+              "RelativeToolTip": "TraineeMVC\\Views\\Authentication\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-10T04:51:47.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\UserDetails\\Index.cshtml",
+              "RelativeDocumentMoniker": "TraineeMVC\\Views\\UserDetails\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\UserDetails\\Index.cshtml",
+              "RelativeToolTip": "TraineeMVC\\Views\\UserDetails\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-10T04:28:48.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\UserDetails\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TraineeMVC\\Views\\UserDetails\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\UserDetails\\Edit.cshtml",
+              "RelativeToolTip": "TraineeMVC\\Views\\UserDetails\\Edit.cshtml",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-10T04:28:03.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TraineeMVC\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TraineeMVC\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-10T01:01:42.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "TraineeMVC\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "TraineeMVC\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-10T00:57:40.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Student\\Index.cshtml",
+              "RelativeDocumentMoniker": "TraineeMVC\\Views\\Student\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Student\\Index.cshtml",
+              "RelativeToolTip": "TraineeMVC\\Views\\Student\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-10T00:54:48.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "TraineeMVC\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "TraineeMVC\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-10T00:58:18.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "TraineeMVC\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "TraineeMVC\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-10T00:58:34.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Models\\Student.cs",
+              "RelativeToolTip": "TraineeMVC\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T00:52:01.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "TraineeMVC.csproj",
               "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\TraineeMVC.csproj",
               "RelativeDocumentMoniker": "TraineeMVC\\TraineeMVC.csproj",
@@ -114,38 +471,47 @@
               "RelativeToolTip": "TraineeMVC\\TraineeMVC.csproj",
               "ViewState": "AgIAAAIAAAAAAAAAAAAuwA4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-09-08T09:31:35.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-08T09:31:35.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "TraineeMVC\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "TraineeMVC\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TraineeMVC\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T09:31:35.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "TraineeMVC\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "TraineeMVC\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAqwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-08T09:31:35.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-08T09:31:35.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeDocumentMoniker": "TraineeMVC\\Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeToolTip": "TraineeMVC\\Views\\Shared\\_Layout.cshtml.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-08T09:31:35.965Z",
-              "EditorCaption": ""
+              "DocumentIndex": 27,
+              "Title": "UserDetails.cs",
+              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Models\\UserDetails.cs",
+              "RelativeDocumentMoniker": "TraineeMVC\\Models\\UserDetails.cs",
+              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\Models\\UserDetails.cs",
+              "RelativeToolTip": "TraineeMVC\\Models\\UserDetails.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T10:26:46.191Z"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",
@@ -153,23 +519,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\appsettings.json",
-              "RelativeDocumentMoniker": "TraineeMVC\\appsettings.json",
-              "ToolTip": "C:\\Users\\aadhikari\\source\\repos\\TraineeMVC\\TraineeMVC\\appsettings.json",
-              "RelativeToolTip": "TraineeMVC\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-08T09:31:36.039Z"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
