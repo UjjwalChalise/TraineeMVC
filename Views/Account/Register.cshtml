@@ -1,0 +1,146 @@
+﻿@model TraineeMVC.ViewModel.UserDetailsCreateViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow">
+                <div class="card-body p-4">
+
+                    <h2 class="text-center mb-4">
+                        Create Account
+                    </h2>
+
+                    <form asp-controller="Account"
+                          asp-action="Register"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-3">
+                        </div>
+
+                        <!-- Username -->
+                        <div class="mb-3">
+                            <label asp-for="Username"
+                                   class="form-label">
+                                Username
+                            </label>
+
+                            <input asp-for="Username"
+                                   class="form-control"
+                                   autocomplete="username" />
+
+                            <span asp-validation-for="Username"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <label asp-for="Password"
+                                   class="form-label">
+                                Password
+                            </label>
+
+                            <input asp-for="Password"
+                                   type="password"
+                                   class="form-control"
+                                   autocomplete="new-password" />
+
+                            <span asp-validation-for="Password"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <!-- First Name / Last Name -->
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="FirstName"
+                                       class="form-label">
+                                    First Name
+                                </label>
+
+                                <input asp-for="FirstName"
+                                       class="form-control" />
+
+                                <span asp-validation-for="FirstName"
+                                      class="text-danger">
+                                </span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="LastName"
+                                       class="form-label">
+                                    Last Name
+                                </label>
+
+                                <input asp-for="LastName"
+                                       class="form-control" />
+
+                                <span asp-validation-for="LastName"
+                                      class="text-danger">
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="mb-3">
+                            <label asp-for="DateOfBirth"
+                                   class="form-label">
+                                Date of Birth
+                            </label>
+
+                            <input asp-for="DateOfBirth"
+                                   type="date"
+                                   class="form-control" />
+                        </div>
+
+                        <!-- Address -->
+                        <div class="mb-3">
+                            <label asp-for="Address"
+                                   class="form-label">
+                                Address
+                            </label>
+
+                            <textarea asp-for="Address"
+                                      class="form-control"
+                                      rows="3"></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit"
+                                class="btn btn-primary w-100">
+                            Create Account
+                        </button>
+
+                    </form>
+
+                    <div class="text-center mt-3">
+
+                        <span>
+                            Already have an account?
+                        </span>
+
+                        <a asp-controller="Account"
+                           asp-action="Login">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
