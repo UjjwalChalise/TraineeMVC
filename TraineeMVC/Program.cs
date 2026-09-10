@@ -1,5 +1,7 @@
 using TraineeMVC.Data;
 using Microsoft.EntityFrameworkCore;
+using TraineeMVC.Repositories;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
+
+builder.Services
+    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Authentication/Login";
+        options.LogoutPath = "/Authentication/Logout";
+    });
 
 var app = builder.Build();
 
@@ -27,6 +39,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseRouting();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

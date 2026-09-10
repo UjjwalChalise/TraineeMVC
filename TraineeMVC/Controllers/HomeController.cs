@@ -1,8 +1,11 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TraineeMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TraineeMVC.Controllers;
+
+[Authorize]
 
 public class HomeController : Controller
 {

@@ -1,15 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TraineeMVC.Data;
 using TraineeMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TraineeMVC.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UserDetailsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -22,8 +20,7 @@ namespace TraineeMVC.Controllers
         // GET: UserDetails
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.UserDetails.Include(u => u.ApplicationUser);
-            return View(await applicationDbContext.ToListAsync());
+            return View(await _context.UserDetails.ToListAsync());
         }
 
         // GET: UserDetails/Details/5
@@ -35,8 +32,8 @@ namespace TraineeMVC.Controllers
             }
 
             var userDetails = await _context.UserDetails
-                .Include(u => u.ApplicationUser)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (userDetails == null)
             {
                 return NotFound();
@@ -48,16 +45,15 @@ namespace TraineeMVC.Controllers
         // GET: UserDetails/Create
         public IActionResult Create()
         {
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
         // POST: UserDetails/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ApplicationUserId,FirstName,LastName,DateOfBirth,Address")] UserDetails userDetails)
+        public async Task<IActionResult> Create(
+            [Bind("Id,Username,Password,Role,FirstName,LastName,DateOfBirth,Address")]
+            UserDetails userDetails)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +61,7 @@ namespace TraineeMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", userDetails.ApplicationUserId);
+
             return View(userDetails);
         }
 
@@ -78,20 +74,22 @@ namespace TraineeMVC.Controllers
             }
 
             var userDetails = await _context.UserDetails.FindAsync(id);
+
             if (userDetails == null)
             {
                 return NotFound();
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", userDetails.ApplicationUserId);
+
             return View(userDetails);
         }
 
         // POST: UserDetails/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ApplicationUserId,FirstName,LastName,DateOfBirth,Address")] UserDetails userDetails)
+        public async Task<IActionResult> Edit(
+            int id,
+            [Bind("Id,Username,Password,Role,FirstName,LastName,DateOfBirth,Address")]
+            UserDetails userDetails)
         {
             if (id != userDetails.Id)
             {
@@ -111,14 +109,13 @@ namespace TraineeMVC.Controllers
                     {
                         return NotFound();
                     }
-                    else
-                    {
-                        throw;
-                    }
+
+                    throw;
                 }
+
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ApplicationUserId"] = new SelectList(_context.Users, "Id", "Id", userDetails.ApplicationUserId);
+
             return View(userDetails);
         }
 
@@ -131,8 +128,8 @@ namespace TraineeMVC.Controllers
             }
 
             var userDetails = await _context.UserDetails
-                .Include(u => u.ApplicationUser)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (userDetails == null)
             {
                 return NotFound();
@@ -147,12 +144,13 @@ namespace TraineeMVC.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var userDetails = await _context.UserDetails.FindAsync(id);
+
             if (userDetails != null)
             {
                 _context.UserDetails.Remove(userDetails);
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
@@ -162,3 +160,4 @@ namespace TraineeMVC.Controllers
         }
     }
 }
+

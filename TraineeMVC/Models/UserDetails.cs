@@ -1,11 +1,14 @@
 ﻿namespace TraineeMVC.Models;
+
 public class UserDetails
 {
     public int Id { get; set; }
 
-    public string ApplicationUserId { get; set; } = string.Empty;
+    public string Username { get; set; } = string.Empty;
 
-    public ApplicationUser ApplicationUser { get; set; } = null!;
+    public string Password { get; set; } = string.Empty;
+
+    public string Role { get; set; } = string.Empty;
 
     public string FirstName { get; set; } = string.Empty;
 

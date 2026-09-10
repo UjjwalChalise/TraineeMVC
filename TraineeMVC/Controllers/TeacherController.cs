@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TraineeMVC.Data;
 using TraineeMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TraineeMVC.Controllers
 {
+    [Authorize]
     public class TeacherController : Controller
     {
         private readonly ApplicationDbContext _context;

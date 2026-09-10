@@ -10,9 +10,6 @@ public class ApplicationDbContext : DbContext
         : base(options)
     {
     }
-
-    public DbSet<ApplicationUser> Users => Set<ApplicationUser>();
-
     public DbSet<UserDetails> UserDetails => Set<UserDetails>();
 
     public DbSet<Teacher> Teachers => Set<Teacher>();
@@ -39,16 +36,6 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-
-        // ---------------------------------------
-        // ApplicationUser -> UserDetails
-        // ---------------------------------------
-
-        builder.Entity<ApplicationUser>()
-            .HasOne(u => u.UserDetails)
-            .WithOne(d => d.ApplicationUser)
-            .HasForeignKey<UserDetails>(d => d.ApplicationUserId)
-            .OnDelete(DeleteBehavior.Cascade);
 
         // ---------------------------------------
         // UserDetails -> Teacher
