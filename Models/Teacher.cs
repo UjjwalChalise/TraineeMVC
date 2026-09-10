@@ -6,5 +6,7 @@ public class Teacher
 
     public string Email { get; set; }
 
+
+
     public ICollection<Course> Courses { get; set; }
 }

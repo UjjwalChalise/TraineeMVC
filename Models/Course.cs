@@ -11,4 +11,7 @@ public class Course
     public Teacher Teacher { get; set; }
 
     public ICollection<Module> Modules { get; set; }
+
+
+
 }

@@ -1,24 +1,36 @@
 using Microsoft.EntityFrameworkCore;
 using TraineeMVC.Models;
-
+using TraineeMVC.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Connection String
-var connectionString = builder.Configuration.GetConnectionString("TraineeConnection");
+var connectionString =
+    builder.Configuration.GetConnectionString("TraineeConnection");
 
-// Register DbContext
+// DbContext
 builder.Services.AddDbContext<TraineeDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-// Add services to the container
+// Repository Pattern
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+// Session
+builder.Services.AddDistributedMemoryCache();
 
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// MVC
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
+// Configure HTTP pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -26,7 +38,10 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 
