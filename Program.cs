@@ -1,20 +1,9 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TraineeMVC.Data;
 using TraineeMVC.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/Authentication/Login";
-        options.AccessDeniedPath = "/Authentication/AccessDenied";
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
-        options.SlidingExpiration = true;
-    });
 
 var connectionString =
     builder.Configuration.GetConnectionString("DefaultConnection")
@@ -25,11 +14,27 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services
-    .AddDefaultIdentity<ApplicationUser>(options =>
+    .AddIdentity<ApplicationUser, IdentityRole>(options =>
     {
         options.SignIn.RequireConfirmedAccount = false;
+
+        options.Password.RequiredLength = 8;
+        options.Password.RequireNonAlphanumeric = false;
+
+        options.Lockout.MaxFailedAccessAttempts = 5;
+        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
     })
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.LogoutPath = "/Account/Logout";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+    options.SlidingExpiration = true;
+});
 
 builder.Services.AddControllersWithViews();
 
@@ -55,38 +60,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.MapRazorPages();
-
 app.Run();
-
-// Microsoft.AspNetCore.Identity.UI
-// microsoft.aspnetcore.identity.entityframeworkcore
-// using TraineeMVC.Models;
-// using Microsoft.EntityFrameworkCore;
-//
-// var builder = WebApplication.CreateBuilder(args);
-//
-// var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-//
-// builder.Services.AddDbContext<TraineeDBContext>(options =>
-//     options.UseSqlServer(
-//         connectionString
-//     )
-// );
-//
-// builder.Services.AddControllersWithViews();
-//
-// var app = builder.Build();
-//
-// app.UseHttpsRedirection();
-// app.UseStaticFiles();
-//
-// app.UseRouting();
-// app.UseAuthorization();
-//
-// app.MapControllerRoute(
-//     name: "default",
-//     pattern: "{controller=Home}/{action=Index}/{id?}"
-// );
-//
-// app.Run();

@@ -44,8 +44,19 @@
                 </a>
 
                 <!-- Authentication area -->
-                <div class="ms-auto">
-                    <span class="text-muted">Authentication</span>
+                <div class="ms-auto d-flex align-items-center gap-3">
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        <span class="text-muted">Hello, @User.Identity.Name!</span>
+                        <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="mb-0">
+                            <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary btn-sm">Login</a>
+                        <a asp-controller="Account" asp-action="Register" class="btn btn-primary btn-sm">Register</a>
+                    }
                 </div>
 
             </div>
@@ -172,17 +183,17 @@
 
     <!-- Sidebar toggle -->
     <script>
-        document.getElementById("sidebarToggle").addEventListener("click", function () {
+            document.getElementById("sidebarToggle").addEventListener("click", function() {
 
-            const sidebar = document.getElementById("sidebar");
+                const sidebar = document.getElementById("sidebar");
 
-            if (sidebar.style.display === "none") {
-                sidebar.style.display = "block";
-            } else {
-                sidebar.style.display = "none";
-            }
+                if (sidebar.style.display === "none") {
+                    sidebar.style.display = "block";
+                } else {
+                    sidebar.style.display = "none";
+                }
 
-        });
+            });
     </script>
 
     @await RenderSectionAsync("Scripts", required: false)
