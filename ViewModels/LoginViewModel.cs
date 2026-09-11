@@ -4,16 +4,11 @@ namespace TraineeMVC.ViewModels
 {
     public class LoginViewModel
     {
-        [Required]
-        public string UserName { get; set; }
+        [Required, EmailAddress]
+        public string Email { get; set; } = string.Empty;
 
-        [Required]
-  
-        public string Password { get; set; }
-        public string? ConfirmPassword {  get; set; }
-       
-        public bool RememberMe { get; set; }
+        [Required, DataType(DataType.Password)]
+        public string Password { get; set; } = string.Empty;
 
-      
     }
 }

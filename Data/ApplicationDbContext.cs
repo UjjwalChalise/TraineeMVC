@@ -22,13 +22,14 @@ public class ApplicationDbContext : DbContext
     public DbSet<AssignmentSubmission> AssignmentSubmissions => Set<AssignmentSubmission>();
     public DbSet<CourseSession> CourseSessions => Set<CourseSession>();
     public DbSet<Attendance> Attendances => Set<Attendance>();
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
 
-        builder.Entity<UserDetails>()
-            .HasIndex(u => u.Username)
+        builder.Entity<ApplicationUser>()
+            .HasIndex(u => u.UserName)
             .IsUnique();
 
         builder.Entity<UserDetails>()

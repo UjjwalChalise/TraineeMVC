@@ -13,7 +13,7 @@ var connectionString =
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddScoped<PasswordService>();
+builder.Services.AddScoped<PasswordHasher>();
 
 builder.Services.AddControllersWithViews();
 

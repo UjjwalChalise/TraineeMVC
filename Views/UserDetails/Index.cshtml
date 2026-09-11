@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Username)
+                @Html.DisplayNameFor(model => model.ApplicationUser.UserName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.PasswordHash)
@@ -39,7 +39,7 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Username)
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.UserName)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.PasswordHash)

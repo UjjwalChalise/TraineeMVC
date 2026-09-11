@@ -1,23 +1,19 @@
 ﻿namespace TraineeMVC.Models;
+
 public class UserDetails
 {
     public int Id { get; set; }
 
- 
-    public string Username { get; set; } = string.Empty;
+    public int ApplicationUserId { get; set; }
+    public ApplicationUser ApplicationUser { get; set; } = null!;
 
+    public string FirstName { get; set; } = string.Empty;
+    public string LastName { get; set; } = string.Empty;
+    public DateTime? DateOfBirth { get; set; }
+    public string? Address { get; set; }
 
     public string PasswordHash { get; set; } = string.Empty;
 
-    public string FirstName { get; set; } = string.Empty;
-
-    public string LastName { get; set; } = string.Empty;
-
-    public DateTime? DateOfBirth { get; set; }
-
-    public string? Address { get; set; }
-
     public Teacher? Teacher { get; set; }
-
     public Student? Student { get; set; }
 }

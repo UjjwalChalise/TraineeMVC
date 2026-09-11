@@ -12,9 +12,9 @@ namespace TraineeMVC.Controllers;
 public class LoginController : Controller
 {
     private readonly ApplicationDbContext _context;
-    private readonly PasswordService _passwordService;
+    private readonly PasswordHasher _passwordService;
 
-    public LoginController(ApplicationDbContext context, PasswordService passwordService)
+    public LoginController(ApplicationDbContext context, PasswordHasher passwordService)
     {
         _context = context;
         _passwordService = passwordService;
@@ -30,13 +30,14 @@ public class LoginController : Controller
 
     // POST: Login
     [HttpPost]
-    [ValidateAntiForgeryToken]
+    [ValidateAntiForgeryToken] //prevent CSRF attacks
     public async Task<IActionResult> Index(string username, string password, string? returnUrl = null)
     {
         var user = await _context.UserDetails
-            .FirstOrDefaultAsync(u => u.Username == username);
+             .Include(u => u.ApplicationUser)
+             .FirstOrDefaultAsync(u => u.ApplicationUser.UserName == username);
 
-        if (user == null || !_passwordService.VerifyPassword(password, user.PasswordHash))
+        if (user == null || !_passwordService.Verify(password, user.PasswordHash))
         {
             ModelState.AddModelError(string.Empty, "Invalid username or password.");
             ViewData["ReturnUrl"] = returnUrl;
@@ -45,7 +46,7 @@ public class LoginController : Controller
 
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name, user.Username),
+            new Claim(ClaimTypes.Name, user.ApplicationUser.UserName),
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
         };
 
