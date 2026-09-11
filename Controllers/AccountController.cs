@@ -2,22 +2,21 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using TraineeMVC.Models;
+using TraineeMVC.Repositories;
 using TraineeMVC.ViewModel;
 
 namespace TraineeMVC.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly TraineeDbContext _context;
-
+        private readonly IUserRepository _userRepository;
         private readonly PasswordHasher<User> _passwordHasher;
 
-        public AccountController(TraineeDbContext traineeDbContext)
+        public AccountController(IUserRepository userRepository)
         {
-            _context = traineeDbContext;
+            _userRepository = userRepository;
             _passwordHasher = new PasswordHasher<User>();
         }
 
@@ -25,6 +24,7 @@ namespace TraineeMVC.Controllers
         public IActionResult Login(string? returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
+
             return View(new LoginViewModel());
         }
 
@@ -40,11 +40,8 @@ namespace TraineeMVC.Controllers
                 return View(model);
             }
 
-            User? user = await _context.Users.Where(x=>x.Email == model.Email).FirstOrDefaultAsync();
-
-            user.UserId???
-                Student table 
-                teachers table 
+            User? user =
+                await _userRepository.GetByEmailAsync(model.Email);
 
             if (user == null)
             {
@@ -55,10 +52,11 @@ namespace TraineeMVC.Controllers
                 return View(model);
             }
 
-            var passwordResult = _passwordHasher.VerifyHashedPassword(
-                user,
-                user.PasswordHash,
-                model.Password);
+            var passwordResult =
+                _passwordHasher.VerifyHashedPassword(
+                    user,
+                    user.PasswordHash,
+                    model.Password);
 
             if (passwordResult == PasswordVerificationResult.Failed)
             {
@@ -72,14 +70,20 @@ namespace TraineeMVC.Controllers
             var claims = new List<Claim>
             {
                 new Claim(
+                    ClaimTypes.NameIdentifier,
+                    user.UserId.ToString()),
+
+                new Claim(
                     ClaimTypes.Name,
                     user.FullName),
 
-
-
                 new Claim(
                     ClaimTypes.Email,
-                    user.Email)
+                    user.Email),
+
+                new Claim(
+                    ClaimTypes.Role,
+                    user.Role)
             };
 
             var identity = new ClaimsIdentity(
@@ -88,12 +92,10 @@ namespace TraineeMVC.Controllers
 
             var principal = new ClaimsPrincipal(identity);
 
-            // Cookie configuration
             var authProperties = new AuthenticationProperties
             {
                 IsPersistent = model.RememberMe,
 
-                // Only relevant when Remember Me is checked
                 ExpiresUtc = model.RememberMe
                     ? DateTimeOffset.UtcNow.AddDays(30)
                     : DateTimeOffset.UtcNow.AddHours(1),
@@ -112,7 +114,9 @@ namespace TraineeMVC.Controllers
                 return Redirect(returnUrl);
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(
+                "Index",
+                "Home");
         }
 
         [HttpPost]
@@ -122,7 +126,9 @@ namespace TraineeMVC.Controllers
             await HttpContext.SignOutAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme);
 
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction(
+                "Login",
+                "Account");
         }
 
         [HttpGet]

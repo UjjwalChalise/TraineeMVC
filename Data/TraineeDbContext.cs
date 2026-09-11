@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TraineeMVC.Models;
 
-namespace TraineeMVC.Models
+namespace TraineeMVC.Data
 {
     public class TraineeDbContext : DbContext
     {
-        public TraineeDbContext(DbContextOptions<TraineeDbContext> options)
+        public TraineeDbContext(
+            DbContextOptions<TraineeDbContext> options)
             : base(options)
         {
         }

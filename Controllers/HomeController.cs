@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using TraineeMVC.Data;
 using TraineeMVC.Models;
 
 namespace TraineeMVC.Controllers

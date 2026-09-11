@@ -1,6 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TraineeMVC.Data;
 using TraineeMVC.Models;
 
 public class UsersController : Controller
