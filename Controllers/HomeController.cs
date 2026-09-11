@@ -13,7 +13,7 @@ namespace TraineeMVC.Controllers
 
             public IActionResult Dashboard()
         {
-            return View("~/Views/Shared/_Layout.cshtml");
+            return View();
         }
 
 

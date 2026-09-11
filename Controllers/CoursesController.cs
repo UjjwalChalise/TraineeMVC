@@ -16,11 +16,7 @@ public class CoursesController : Controller
     // GET: COURSES
     public async Task<IActionResult> Index()    
     {
-        //var courses = await _context.Courses.ToListAsync();
-        //Linq use garera view model return garne 
-         
-        var listCoursesViewModel = new List<CourseDetailViewModel>();
-        return View(listCoursesViewModel);
+        return View(await _context.Courses.ToListAsync());
     }
 
     // GET: COURSES/Details/5
@@ -52,7 +48,7 @@ public class CoursesController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("CourseId,Title,Description,InstructorId,CreatedDate,Instructor")] Course course)
+    public async Task<IActionResult> Create([Bind("CourseId,Name,Description,TeacherId,Teacher,Enrollments,Modules,Assignments,Attendances")] Course course)
     {
         if (ModelState.IsValid)
         {
@@ -84,7 +80,7 @@ public class CoursesController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int? courseid, [Bind("CourseId,Title,Description,InstructorId,CreatedDate,Instructor")] Course course)
+    public async Task<IActionResult> Edit(int? courseid, [Bind("CourseId,Name,Description,TeacherId,Teacher,Enrollments,Modules,Assignments,Attendances")] Course course)
     {
         if (courseid != course.CourseId)
         {

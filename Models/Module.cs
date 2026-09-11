@@ -8,18 +8,13 @@ namespace TraineeMVC.Models
         public int ModuleId { get; set; }
 
         [Required]
-        [StringLength(150)]
-        public string ModuleName { get; set; } = string.Empty;
+        public string Name { get; set; }
 
         public string? Description { get; set; }
 
+        [Required]
         public int CourseId { get; set; }
 
-        // Course this module belongs to
-        public Course? Course { get; set; }
-
-        // Assignments in this module
-        public ICollection<Assignment> Assignments { get; set; }
-            = new List<Assignment>();
+        public Course Course { get; set; }
     }
 }

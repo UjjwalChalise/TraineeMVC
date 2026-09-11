@@ -2,17 +2,22 @@
 
 namespace TraineeMVC.Models
 {
-    public class Teacher : User
+    public class Teacher
     {
+        [Key]
+        public int TeacherId { get; set; }
+
         [Required]
-        [StringLength(20)]
-        public string EmployeeCode { get; set; } = string.Empty;
+        public int UserId { get; set; }
+
+        public User User { get; set; }
+
+        [Required]
+        public string EmployeeCode { get; set; }
 
         public string? Specialization { get; set; }
 
-        public string? Qualification { get; set; }
-
-        // Courses taught by teacher
+        // One teacher can teach many courses
         public ICollection<Course> Courses { get; set; }
             = new List<Course>();
     }

@@ -48,7 +48,7 @@ public class UsersController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("UserId,FullName,LastName,Email,PasswordHash,Role")] User user)
+    public async Task<IActionResult> Create([Bind("UserId,Name,Email,Password,Student,Teacher")] User user)
     {
         if (ModelState.IsValid)
         {
@@ -80,7 +80,7 @@ public class UsersController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int? userid, [Bind("UserId,FullName,LastName,Email,PasswordHash,Role")] User user)
+    public async Task<IActionResult> Edit(int? userid, [Bind("UserId,FirstName,LastName,Email,PasswordHash,Student,Teacher")] User user)
     {
         if (userid != user.UserId)
         {

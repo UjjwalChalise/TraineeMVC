@@ -1,5 +1,4 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace TraineeMVC.Models
 {
@@ -8,20 +7,16 @@ namespace TraineeMVC.Models
         [Key]
         public int EnrollmentId { get; set; }
 
-        [ForeignKey("Student")]
+        [Required]
         public int StudentId { get; set; }
 
-        [ForeignKey("Course")]
-        public int CourseId { get; set; }
-
-        public DateTime EnrolledDate { get; set; } = DateTime.Now;
+        public Student Student { get; set; }
 
         [Required]
-        public string Status { get; set; } = "Active";
+        public int CourseId { get; set; }
 
-        // Navigation properties
-        public User? Student { get; set; }
+        public Course Course { get; set; }
 
-        public Course? Course { get; set; }
+        public DateTime EnrolledDate { get; set; }
     }
 }
