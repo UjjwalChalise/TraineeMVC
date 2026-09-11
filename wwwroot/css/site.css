@@ -1,31 +1,207 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
 
 html {
-  position: relative;
-  min-height: 100%;
+    font-size: 14px;
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    background-color: #f5f6fa;
+    color: #212529;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+.navbar {
+    min-height: 64px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.navbar-brand {
+    font-size: 1.15rem;
+    letter-spacing: 0.2px;
 }
+
+    .navbar-brand i {
+        font-size: 1.3rem;
+    }
+
+.navbar .nav-link {
+    color: #adb5bd;
+    padding: 21px 12px;
+    font-size: 0.9rem;
+}
+
+    .navbar .nav-link:hover {
+        color: #ffffff;
+    }
+
+.navbar-account {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-icon-link {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .nav-icon-link:hover {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-icon-link i {
+        font-size: 1.1rem;
+    }
+
+.navbar-divider {
+    width: 1px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin: 0 8px;
+}
+
+.account-button {
+    min-width: 85px;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.sidebar {
+    background-color: #212529;
+    min-height: calc(100vh - 64px);
+    padding: 0;
+    border-right: 1px solid #343a40;
+}
+
+.sidebar-content {
+    padding: 25px 15px;
+}
+
+.sidebar-title {
+    color: #868e96;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding-left: 12px;
+}
+
+.sidebar-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 13px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .sidebar-link i {
+        width: 20px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .sidebar-link:hover {
+        color: #ffffff;
+        background-color: #343a40;
+    }
+
+    .sidebar-link.active {
+        color: #ffffff;
+        background-color: #0d6efd;
+    }
+
+.sidebar-divider {
+    border: 0;
+    border-top: 1px solid #495057;
+    margin: 20px 5px;
+}
+
+.main-content {
+    min-height: calc(100vh - 64px);
+    padding: 30px;
+    background-color: #f5f6fa;
+}
+
+.site-footer {
+    border-top: 1px solid #343a40;
+}
+
+.footer-link {
+    color: #868e96;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+    .footer-link:hover {
+        color: #ffffff;
+    }
+
+@media (max-width: 991.98px) {
+    .navbar-account {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        min-height: auto;
+    }
+
+    .sidebar-content {
+        padding: 15px;
+    }
+
+    .main-content {
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    .site-footer .text-md-end {
+        margin-top: 8px;
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .account-button {
+        min-width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .account-button {
+        font-size: 0;
+    }
+
+        .account-button i {
+            margin-right: 0 !important;
+            font-size: 1rem;
+        }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+

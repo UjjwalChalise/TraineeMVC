@@ -1,19 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace TraineeMVC.Models;
+﻿namespace TraineeMVC.Models;
 
 public class Enrollment
 {
-    [Key]
     public int Id { get; set; }
-    public DateTime EnrolledDate { get; set; }
-    public string Status { get; set; } // "Active", "Completed", "Dropped"
 
     public int StudentId { get; set; }
-    public User Student { get; set; }
+
+    public Student Student { get; set; } = null!;
 
     public int CourseId { get; set; }
-    public Course Course { get; set; }
 
-    public ICollection<LessonProgress> LessonProgresses { get; set; }
+    public Course Course { get; set; } = null!;
+
+    public DateTime EnrollmentDate { get; set; }
+
+    public string Status { get; set; } = "Active";
 }
